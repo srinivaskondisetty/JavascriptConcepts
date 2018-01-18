@@ -1,0 +1,22 @@
+<script>
+    // pass by declaration
+    function outer(){
+        const person = {
+            firstName:'Srinivas',
+            lastName: 'Naidu'
+        };
+        function doIt(){
+            console.log(person);
+            person.firstName = "Sri";
+            console.log(person);
+        }
+
+        doIt();
+        console.log(person);
+
+        
+
+    }    
+    outer();
+</script>
+

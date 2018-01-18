@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<script>
+    'use strict';
+
+    function outer() {
+        console.log('outer this', this);
+        const inner = () => {
+            // This is lexical this
+            console.log('inner this', this);
+        }
+        inner();
+    }
+
+    const obj = {
+        id: 5,
+        outer: outer
+    }
+
+    obj.outer();
+
+</script>

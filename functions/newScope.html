@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<script>
+
+    'use strict';
+
+    // IIFE immediate invoking function expression
+    (function newScope() {
+        // This val will not hoist to top
+        var val = 3;
+        console.log(val);
+    })();
+
+</script>

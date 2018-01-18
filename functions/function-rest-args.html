@@ -1,0 +1,24 @@
+<!DOCTYPTE html>
+<script>
+    'use strict';
+
+    // arguments variable
+    function doIt(a, b, c) {
+        console.log(a, b, c);
+        console.log(arguments);
+        for (let arg of arguments) {
+            console.log(arg);
+        };
+    }
+
+    //doIt(1, 2, 3, 4, 5);
+
+    // rest parameters
+    function doIt2(a, b, c, ...d) {
+        console.log(arguments);
+        console.log(a, b, c, d);
+    }
+
+    doIt2(1, 2, 3, 4, 5);
+
+</script>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<script>
+    'use strict';
+
+    function* getNums() {
+        console.log('returning first number');
+        yield 1;
+        console.log('returing second number');
+        yield 2;
+        console.log('returing third number');
+        yield 3;
+    }
+
+    for (let num of getNums()) {
+        console.log('processing number', num);
+    }
+
+</script>

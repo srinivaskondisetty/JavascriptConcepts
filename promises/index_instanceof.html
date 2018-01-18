@@ -1,0 +1,49 @@
+<script>
+
+    // before ES 2015
+    // function Person(){
+
+    // };
+
+    // from ES 2015
+    class Person { };
+
+    class Student extends Person { }
+
+    var student = new Student();
+    // console.log(typeof Person);
+    // console.log(typeof person);
+    console.log(student instanceof Person);
+    console.log(student instanceof Student);
+
+    // Promise p is created by instantiating a new Promise
+    const p = new Promise((resolve, reject) => {
+        const shouldResolve = true;
+        // The async operation is setTimeOut
+        setTimeout(() => {
+            // Call backs will be executed after 2 seconds.
+            // This time it is success
+            if (shouldResolve) {
+                resolve('success!');
+            } else {
+                reject('failure!');
+            }
+        }, 2000);
+    });
+
+    // This method is not preferred
+    p.then(results => {
+        console.log('then function', results);
+    }, results=>{
+        console.log('catch function', results);
+    });
+
+    p.then(results =>{
+        console.log('then function', results);
+    }).catch(results=>{
+        console.log('catch function', results);
+    })
+
+
+
+</script>
